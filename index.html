@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="main.css" />
+
+
+  <title>Document</title>
+</head>
+
+<body>
+ 
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <a href="#" class="header__logo">
+          <img src="./img/ch1-min.png" alt="">
+        </a>
+        <div class="header__burger">
+          <span></span>
+        </div>
+        <nav class="header__menu">
+          <ul class="header__list">
+            <li>
+              <a href="" class="header__link">О нас</a>
+            </li>
+            <li>
+              <a href=""  class="header__link">Стоимость</a>
+            </li>
+            <li>
+              <a href="" class="header__link">Гарантия</a>
+            </li>
+            <li>
+              <a href=""  class="header__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+    </header>
+    <div class="contant">
+      <div class="container">
+        <div class="content__text">
+          <p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <section class="intro">
+      <div class="wrapper">
+        <h1 class="intro__title"> 
+          <p class="opacity">Покупаете <span class="orange">подержанный</span> автомобиль?
+           <br> <p class="text opacity">Мы подберем для Вас лучшее предложение на рынке с гарантией технической и юридической чистоты.</p>
+      </div>
+       </h1>
+       <form class="contact-form" id="contact-form_1">
+        <p class="contact-form__title">Оставьте заявку на подбор</p>
+        <p class="contact-form__description"></p>
+        <div class="contact-form__input-wrapper">
+          <input name="name" type="text" class="contact-form__input contact-form__input_name" placeholder="Введите ваше имя">
+          <div class="contact-form__error contact-form__error_name"></div>
+        </div>
+                   
+        <div class="contact-form__input-wrapper">
+          <input name="tel" type="tel" class="contact-form__input contact-form__input_tel" placeholder="Введите ваш телефон">
+          <div class="contact-form__error contact-form__error_tel"></div>
+        </div>
+
+        <button class="contact-form__button" type="submit"> <br>Оставить заявку </button>
+      </form>
+    </section>
+    <section class="counter">
+      <div class="container_count">
+      <ul class="row">
+        <div class="str1">
+          <p class="count" data-count="4">4</p>
+            <p class="count-name">года</p>
+        </div>
+        <div class="str2">
+          <p class="count" data-count="5000">5000</p>
+            <p class="count-name">Продиагностированных автомобилей</p>
+        </div>
+        <div class="str3">
+          <p class="count" data-count="1000">1000</p>
+            <p class="count-name">положительных отзывов</p>
+      </div>
+      <div class="str4">
+        <p class="count" data-count="105">105</p>
+          <p class="count-name">параметров проверки</p>
+        </div>
+      </ul>
+    </section>
+    <section class="about" id="about">
+      <div class="about__title">
+        <h2>
+          Что мы проверяем?
+        </h2>
+      </div>
+      <div class="details__row1">
+        <div class="detail__1">
+          <div class="detail__icon">
+            <img src="./img/engine-min.png" width="50" height="50" alt="engine">
+          </div>
+          <div class="detail__text" id="1">
+            Двигатель
+              <span class="text_hover">Проверка состояния двигателя, замер компрессии.</span>
+            </div>
+          </div>
+        <div class="detail__2">
+          <div class="detail__icon">
+            <img src="./img/batery-min.png" width="50" height="50" alt="ACC">
+          </div>
+          <div class="detail__text2">
+            АКБ
+            <span class="text_hover">Проверка даты выпуска, напряжения, срока службы и работоспособности.</span>
+          </div>
+        </div>  
+        <div class="detail__3">
+          <div class="detail__icon">
+            <img src="./img/break-min.png" width="50" height="50" alt="break">
+          </div>
+          <div class="detail__text3">
+            Тормозная<br> система
+            <span class="text_hover"> Проверяем состояние тормозных механизмов, дисков, колодок, антиблокировочной, антипробуксовочной систем и антизаноса.</span>
+          </div>
+        </div>  
+        <div class="detail__4">
+          <div class="detail__icon">
+            <img src="./img/turbo-min.png" width="50" height="50" alt="turbo">
+          </div>
+          <div class="detail__text4">
+            Турбина
+            <span class="text_hover">Проверка состояния турбины, давления наддува, отсутствия подтеков масла.</span>
+          </div>
+        </div>  
+        <div class="detail__5">
+          <div class="detail__icon">
+            <img src="./img/wheel-min.png" width="50" height="50" alt="wheel">
+          </div>
+          <div class="detail__text5">
+            Колеса
+            <span class="text_hover">Равномерность износа, дата производства, состояние и марка шин - важный момент при покупке автомобиля.</span>
+          </div>
+        </div>
+        <div class="details__row2">
+          <div class="detail__2_1">
+            <div class="detail__icon">
+            <img src="./img/body-min.png" width="50" height="50" alt="body">
+          </div>
+          <div class="detail__text2_1">
+            Кузов
+              <span class="text_hover">Проверка кузова на предмет перекраса, ремонта, снятия-установки элементов.</span>
+            </div>
+          </div>
+            <div class="detail__2_2">
+              <div class="detail__icon">
+              <img src="./img/amort-min.png" width="50" height="50" alt="amort">
+            </div>
+            <div class="detail__text2_2">
+              Подвеска
+                <span class="text_hover">Это один из самых важных элементов подвески. Они напрямую влияют на управляемость автомобиля, на его устойчивость и плавность хода автомобиля.</span>
+              </div>
+            </div>
+            <div class="detail__2_3">
+              <div class="detail__icon">
+              <img src="./img/kpp-min.png" width="50" height="50" alt="kpp">
+            </div>
+            <div class="detail__text2_3">
+              КПП
+                <span class="text_hover">Проверка уровня жидкости и компьютерная диагностика.</span>
+              </div>
+            </div>
+            <div class="detail__2_4">
+              <div class="detail__icon">
+              <img src="./img/steering-wheel-min.png" width="50" height="50" alt="steering-wheel-min">
+            </div>
+            <div class="detail__text2_4">
+              Рулевое<br> управление
+                <span class="text_hover">Наличие люфтов, течей, стуков в рулевом управлении. Уровень рабочей жидкости, состояние рулевой рейки и работоспособность усилителя руля.</span>
+              </div>
+            </div>
+            <div class="detail__2_5">
+              <div class="detail__icon">
+              <img src="./img/femida-min.png" width="50" height="50" alt="femida-min">
+            </div>
+            <div class="detail__text2_4">
+              Юр. чистоту
+                <span class="text_hover">Криминалистическая экспертиза автомобиля. Проверка в ГИБДД и Бюро Кредитных Историй.</span>
+              </div>
+            </div>
+          </div>
+    </section>
+</main>
+<script>
+
+</script> 
+</body>
+</html>
