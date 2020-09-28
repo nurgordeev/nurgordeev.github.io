@@ -320,6 +320,7 @@ p.text {
   min-height: 100vh;
   background: url(./img/cropped-1920-1080-1078320-min.jpg) no-repeat center;
   background-size: cover;
+  overflow:hidden;
 }
 .about__title {
   padding: 65px 0;
