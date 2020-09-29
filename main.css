@@ -263,7 +263,7 @@ p.text {
 }
 @media (max-width: 767px) {
   .contact-form {
-    width: 100%;
+    max-width: 100%;
     bottom: 50px;
     transition: 0.3s;
   }
