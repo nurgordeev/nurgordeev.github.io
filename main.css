@@ -19,8 +19,7 @@ body {
   color: black;
   margin: 0;
 }
-.wrapper {
-}
+
 .container {
   max-width: 1180px;
   margin: 0 auto;
@@ -151,40 +150,48 @@ body {
   }
 }
 .intro {
-  background: url(./img/audi-r8-edet-po-doroge-na-fone-holmov_1920x1200.jpg)
-    no-repeat;
+  background: url(./img/audi-r8-edet-po-doroge-na-fone-holmov_1920x1200.jpg);
   background-size: cover;
+  height: 100vh;
+  background-position: center center;
 }
 .intro__title {
   padding-top: 250px;
   font-style: normal;
   font-weight: bolder;
-  font-size: 50px;
-  line-height: 60px;
   font-family: open-sans, sans-serif;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
+p.opacity {
+  font-size: calc(15px + 35 * (100vw / 1180));
+  line-height: 60px;
+}
 @media (max-width: 767px) {
-  .intro__title {
-    padding-top: 150px;
-    font-style: normal;
-    font-weight: bolder;
-    font-size: 25px;
+  p.opacity {
+    font-size: calc(15px + (35 + 35 * 0.7) * ((100vw - 320px) / 1180));
+    position: relative;
+    bottom: 100px;
   }
 }
 .orange {
   color: #f4be6a;
 }
-
 .opacity {
   background-color: rgba(0, 0, 0, 0.7);
 }
 p.text {
-  font-size: 20px;
-  line-height: 40px;
-  padding-top: 20px;
+  font-size: calc(11px + 9 * (100vw / 1180));
+  line-height: 45px;
+}
+@media (max-width: 767px) {
+  p.text {
+    font-size: calc(11px + (9 + 9 * 0.7) * ((100vw - 320px) / 1180));
+    line-height: 17px;
+    position: relative;
+    bottom: 100px;
+  }
 }
 .container_count {
   width: 100%;
@@ -238,7 +245,11 @@ p.text {
     font-size: 28px;
   }
 }
-
+@media (max-width: 767px) {
+  .contact-form-title {
+    font-size: calc(10px + (10 + 10 * 0.7) * ((100vw -320px) / 1180));
+  }
+}
 .contact-form {
   box-sizing: border-box;
   width: 100%;
@@ -248,6 +259,13 @@ p.text {
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   position: relative;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .contact-form {
+    bottom: 50px;
+    transition: 0.3s;
+  }
 }
 
 .contact-form__title {
@@ -257,7 +275,7 @@ p.text {
   width: calc(100% + 60px);
   line-height: 1.5;
   text-align: center;
-  font-size: 20px;
+  font-size: calc(10px + 10 * (100vw / 1180));
   font-weight: 700;
   text-transform: uppercase;
   color: #000;
@@ -283,6 +301,11 @@ p.text {
   background: #fbfbfb;
   border-radius: 5px;
   font-size: 16px;
+}
+@media (max-width: 767px) {
+  .contact-form__input {
+    height: 30px;
+  }
 }
 
 .contact-form__error {
@@ -320,7 +343,7 @@ p.text {
   min-height: 100vh;
   background: url(./img/cropped-1920-1080-1078320-min.jpg) no-repeat center;
   background-size: cover;
-  overflow:hidden;
+  overflow: hidden;
 }
 .about__title {
   padding: 65px 0;
