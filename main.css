@@ -149,6 +149,11 @@ body {
     margin: 0px 0px 20px 0px;
   }
 }
+.wrapper__count {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 .intro {
   background: url(./img/audi-r8-edet-po-doroge-na-fone-holmov_1920x1200.jpg);
   background-size: cover;
@@ -194,12 +199,11 @@ p.text {
   }
 }
 .container_count {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -210,17 +214,18 @@ p.text {
 @media (max-width: 950px) {
   .row {
     display: block;
+    justify-content: center;
     position: relative;
     width: 100%;
     height: 100%;
+    text-align: center;
+    margin: 0;
   }
 }
 .counter {
   padding-top: 85px;
-  width: 100%;
-  height: 100%;
   background-color: #fff;
-  padding-bottom: 98px;
+  padding-bottom: 85px;
   font-family: open-sans, sans-serif;
 }
 .counter .count-name {
@@ -228,7 +233,7 @@ p.text {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.counter p {
+.counter {
   text-align: center;
   width: 100%;
 }
@@ -243,6 +248,7 @@ p.text {
   .counter .count {
     color: #f4be6a;
     font-size: 28px;
+    justify-content: center;
   }
 }
 @media (max-width: 767px) {
@@ -259,6 +265,9 @@ p.text {
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   position: relative;
+  float: right;
+  margin-top: 100px;
+  margin-right: 100px;
   justify-content: center;
 }
 @media (max-width: 767px) {
@@ -266,6 +275,7 @@ p.text {
     max-width: 100%;
     bottom: 50px;
     transition: 0.3s;
+    margin: 0;
   }
 }
 
@@ -292,7 +302,6 @@ p.text {
 .contact-form__input-wrapper {
   margin-bottom: 20px;
 }
-
 .contact-form__input {
   width: 100%;
   height: 50px;
@@ -359,7 +368,138 @@ p.text {
   padding-top: 100px;
   padding-bottom: 35px;
 }
-.details__row1 {
+.iconblock,
+.iconblock__2 {
+  margin: 10px 0;
+  transition: all 0.7s ease 0s;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.iconblock__2 {
+  margin-top: 300px;
+  margin-bottom: 90px;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5,
+.icon6,
+.icon7,
+.icon8 {
+  font-size: 64px;
+  border: 6px double black;
+  background-color: white;
+  display: block;
+  height: 64px;
+  width: 64px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 18px;
+  border-radius: 100px;
+  box-sizing: content-box;
+}
+.iconblock h3 {
+  transition: all 0.7s ease 0s;
+  color: white;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 6px 0;
+  padding: 6px;
+  font-size: 20px;
+}
+.engine,
+.gear,
+.batery,
+.dashboard,
+.st_wheel,
+.turbo,
+.wheel,
+.femida {
+  margin: 0 auto;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+[data-tooltip] {
+  position: relative; /* Относительное позиционирование */
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip); /* Выводим текст */
+  position: absolute; /* Абсолютное позиционирование */
+  width: 300px; /* Ширина подсказки */
+  margin-top: 120px;
+  left: -80px;
+  background: black; /* Синий цвет фона */
+  color: #fff; /* Цвет текста */
+  padding: 0.5em; /* Поля вокруг текста */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+  pointer-events: none; /* Подсказка */
+  opacity: 0; /* Подсказка невидима */
+  transition: 1s; /* Время появления подсказки */
+}
+[data-tooltip]:hover::after {
+  opacity: 1; /* Показываем подсказку */
+  top: 2em; /* Положение подсказки */
+}
+@media (max-width: 950px) {
+  .iconblock,
+  .iconblock__2 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: space-between;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .st_wheel {
+    margin-bottom: 110px;
+  }
+}
+.gcount {
+  background-color: #fff;
+  font-family: open-sans, sans-serif;
+  color: #f4be6a;
+  font-size: calc(10px + 12 * (100vw / 1180));
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding-bottom: 50px;
+  text-align: left;
+}
+.gcount-name {
+  font-weight: 700;
+  font-size: 16px;
+  font-size: calc(8px + 8 * (100vw / 1180));
+  letter-spacing: -0.4px;
+  line-height: 1.3;
+  margin-bottom: 26px;
+}
+.head h1 {
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: raleway, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 27px;
+}
+.cost {
+  min-height: 100vh;
+  background: url(./img/audi-r8-v10-plus-2018-white-sports-car-sports-coupe-besthqwallpapers.com-1920x1080.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+.head_cost {
   padding: 65px 0;
   font-style: normal;
   font-weight: bolder;
@@ -371,344 +511,4 @@ p.text {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
   padding-top: 100px;
   padding-bottom: 35px;
-}
-
-.detail__icon {
-  padding-left: 4px;
-  padding-top: 20px;
-  width: 100px;
-  cursor: pointer;
-  height: 100px;
-  margin: auto;
-  background-color: white;
-  border-radius: 100%;
-  display: inline-block;
-  background-position: 5px 1px;
-  margin-right: 0;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-}
-.detail__text {
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  margin-top: 5px;
-  margin-left: 5px;
-}
-.detail__1 {
-  position: relative;
-  display: inline-block;
-}
-.detail__1 .text_hover {
-  visibility: hidden;
-  width: 100%;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__1:hover .text_hover {
-  visibility: visible;
-}
-
-.detail__2 {
-  position: relative;
-  display: inline-block;
-}
-.detail__2 .text_hover {
-  visibility: hidden;
-  width: 100%;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__2:hover .text_hover {
-  visibility: visible;
-}
-.detail__text2 {
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  margin-top: 5px;
-  margin-left: 0px;
-  text-align: center;
-}
-.detail__3 {
-  position: relative;
-  top: 19px;
-  display: inline-block;
-}
-.detail__3 .text_hover {
-  visibility: hidden;
-  width: 100%;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__3:hover .text_hover {
-  visibility: visible;
-}
-.detail__text3 {
-  position: relative;
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  margin-top: 5px;
-  margin-left: 0px;
-  text-align: center;
-}
-
-.detail__4 {
-  position: relative;
-  display: inline-block;
-}
-.detail__4 .text_hover {
-  visibility: hidden;
-  width: 100%;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__4:hover .text_hover {
-  visibility: visible;
-}
-.detail__text4 {
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  margin-top: 5px;
-  margin-left: 0px;
-  text-align: center;
-}
-.detail__5 {
-  position: relative;
-  display: inline-block;
-}
-.detail__5 .text_hover {
-  visibility: hidden;
-  width: 100%;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__5:hover .text_hover {
-  visibility: visible;
-}
-.detail__text5 {
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-
-  text-align: center;
-}
-.detail__2_1 {
-  position: relative;
-  display: inline-block;
-  margin-top: 100px;
-}
-.detail__2_1 .text_hover {
-  visibility: hidden;
-  width: 100%;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__2_1:hover .text_hover {
-  visibility: visible;
-}
-.detail__text2_1 {
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  margin-top: 5px;
-  margin-left: 0px;
-  text-align: center;
-}
-.detail__2_2 {
-  position: relative;
-  display: inline-block;
-}
-.detail__2_2 .text_hover {
-  visibility: hidden;
-  width: 250px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__2_2:hover .text_hover {
-  visibility: visible;
-}
-.detail__text2_2 {
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  margin-top: 5px;
-  margin-left: 0px;
-  text-align: center;
-}
-.detail__2_3 {
-  position: relative;
-  display: inline-block;
-}
-.detail__2_3 .text_hover {
-  visibility: hidden;
-  width: 250px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__2_3:hover .text_hover {
-  visibility: visible;
-}
-.detail__text2_3 {
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  margin-top: 5px;
-  margin-left: 0px;
-  text-align: center;
-}
-.detail__2_4 {
-  position: relative;
-  top: 19px;
-  display: inline-block;
-}
-.detail__2_4 .text_hover {
-  visibility: hidden;
-  width: 100%;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__2_4:hover .text_hover {
-  visibility: visible;
-}
-.detail__text2_4 {
-  position: relative;
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  margin-top: 5px;
-  margin-left: 0px;
-  text-align: center;
-}
-.detail__2_5 {
-  position: relative;
-  display: inline-block;
-}
-.detail__2_5 .text_hover {
-  visibility: hidden;
-  width: 250px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  left: 100px;
-  bottom: 50px;
-  z-index: 1;
-}
-.detail__2_5:hover .text_hover {
-  visibility: visible;
-}
-.detail__text2_5 {
-  font-size: 17px;
-  line-height: 1.2;
-  transition: all 0.5s;
-  color: white;
-  font-family: open-sans, sans-serif;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  margin-top: 5px;
-  margin-left: 0px;
-  text-align: center;
 }
