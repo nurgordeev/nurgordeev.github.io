@@ -1,7 +1,8 @@
 html,
 body {
   height: 100%;
-  font-family: open-sans, sans-serif;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 *,
 ::before,
@@ -431,7 +432,7 @@ p.text {
   width: 300px; /* Ширина подсказки */
   margin-top: 120px;
   left: -80px;
-  background: black; /* Синий цвет фона */
+  background: black;
   color: #fff; /* Цвет текста */
   padding: 0.5em; /* Поля вокруг текста */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
@@ -457,6 +458,9 @@ p.text {
   }
   .st_wheel {
     margin-bottom: 110px;
+  }
+  .engine {
+    z-index: 0;
   }
 }
 .head h1 {
@@ -494,6 +498,14 @@ p.text {
   text-align: left;
   padding-right: 20px;
 }
+.container2 span {
+  font-size: 25px;
+  font-weight: 800;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 27px;
+}
 .container2 {
   background: white;
   box-shadow: 0 3px 20px black;
@@ -501,6 +513,12 @@ p.text {
   padding: 40px;
   text-align: center;
   position: relative;
+  justify-content: space-around;
+}
+@media (max-width: 650px) {
+  .container2 > div {
+    width: 100%;
+  }
 }
 .container2 > div h3 {
   color: #f4be6a;
@@ -513,7 +531,6 @@ h3 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-  text-align: left;
 }
 .container3 {
   min-height: 100vh;
@@ -527,21 +544,74 @@ h3 {
 .container3 .blocks {
   background-size: 100%;
   width: 257px;
-  height: 500px;
+  height: 650px;
   box-sizing: border-box;
   padding: 20px;
   position: relative;
   display: inline-block;
+  vertical-align: top;
   margin: 0 1%;
   transition: all 0.3s;
   background-color: rgba(255, 255, 255, 0.7);
-  text-align: left;
+  margin-bottom: 10px;
 }
 .container3 ul {
   color: black;
 }
-.container3 h3 {
-  font-size: 20px;
+.container3 h2 {
   text-align: center;
-  margin-top: 0;
+  font-size: 25px;
+  font-weight: 800;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+  color: black;
+}
+.container3 .blocks .cenb {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  text-align: left;
+  color: rgb(214, 214, 214);
+}
+.container3 .blocks p {
+  font-weight: 700;
+  font-size: 14px;
+  padding-bottom: 18px;
+  color: rgb(51, 51, 51);
+}
+.container3 .blocks span {
+  font-size: 16px;
+  font-weight: bolder;
+}
+.container3 .blocks .botb {
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  padding: 3px 0;
+  cursor: pointer;
+  text-align: center;
+}
+.container4 {
+  box-shadow: 0 -3px 20px black;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+}
+.container4 .social img {
+  vertical-align: bottom;
+  border: 0;
+  max-width: 100%;
+}
+.container4 .tel a {
+  text-decoration: none;
+  color: black;
+  vertical-align: bottom;
+  border: 0;
+  max-width: 100%;
+}
+.container4 p {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-weight: 550;
+  margin-top: 10px;
 }
